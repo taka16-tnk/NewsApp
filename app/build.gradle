@@ -10,6 +10,7 @@ android {
         applicationId "com.demo.newsapp"
         minSdkVersion 23
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
 
@@ -30,6 +31,7 @@ android {
 
 dependencies {
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def lifecycle_version = "2.3.0"
     def navigation_version = "2.3.4"
     def room_version = "2.2.6"
@@ -56,8 +58,8 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     implementation "android.arch.persistence.room:compiler:$room_version"
 
-    // livedate
-    implementation "androidx.lifecycle.lifecycle-livedata:$lifecycle_version"
+    // livedata
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
 
     //retrofit and Gson
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
